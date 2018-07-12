@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="weatherApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="weather.js"></script>
+    <link rel="stylesheet" href="weather.css">
+    <title>Rocketmiles Weather App</title>
+  </head>
+  <body>
+    <div class="weatherApp" ng-controller="WeatherAppController as weathers">
+      <h1>Weather App</h1>
+      <section class="currentWeather" ng-if="weathers.currentWeather != null">
+        <h2>{{weathers.currentWeather.city}}</h2>
+        <h2>{{weathers.currentWeather.day}}, {{weathers.currentWeather.date}}</h2>
+        <h2>{{weathers.currentWeather.sky}}</h2>
+        <h2 class="temperature">{{weathers.currentWeather.temperature}}&#176; F</h2>
+      </section>
+      <section class="weatherSection">
+      <div class="daysWeather" ng-repeat="forecast in weathers.forecast">
+        <div>{{forecast.day}}</div>
+        <div class="listDate">{{forecast.date}}</div>
+        <div class="listTemperature">{{forecast.temperature}}&#176;F</div>
+      </div>
+      </section>
+    </div>
+  </body>
+</html>

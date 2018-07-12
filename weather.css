@@ -1,0 +1,47 @@
+body {
+  cursor: default;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 3px 0;
+}
+
+.weatherApp {
+  background-color: #e6e6e6;
+  border: 1.5px solid #878787;
+  box-shadow: 4px 6px #656363;
+  padding: 10px
+}
+
+.currentWeather {
+  color: #878787;
+  margin-bottom: 40px;
+}
+
+.temperature {
+  color: #000000;
+  font-size: 50px;
+}
+
+.weatherSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.daysWeather {
+  margin: 10px;
+  text-align: center;
+}
+
+.listDate {
+  white-space: nowrap;
+}
+
+.listTemperature {
+  font-size: 25px;
+  white-space: nowrap;
+}
